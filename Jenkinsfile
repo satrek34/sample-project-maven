@@ -1,17 +1,13 @@
-pipeline{
-       agent any
-       stages{
-              stage('Build'){
-                 ........
-                }
-              stage('Test'){
-                 ........
-                }
-              stage('Deploy'){
-                 ........
-                }
-              stage('Monitor'){
-                 ........
-                }
-       }
+pipeline {
+    agent any
+    options {
+        timeout(time: 02, unit: 'MINUTES') 
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
 }
